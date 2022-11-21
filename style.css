@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.light,
+:root {
+  --bg-theme-color: #818181;
+  --bg-color: white;
+  --text-color: #121214;
+}
+
+.dark,
+:root:has(#dark:checked) {
+  --bg-theme-color: #424242;
+  --bg-color: #121214;
+  --text-color: #fff;
+}
+
+.orange,
+:root:has(#orange:checked) {
+  --bg-theme-color: #c27b72;
+  --bg-color: #eb614f;
+  --text-color: #b92107;
+}
+
+.purple,
+:root:has(#purple:checked) {
+  --bg-theme-color: #aa65a1;
+  --bg-color: #a52894;
+  --text-color: #5e0251;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+article {
+  width: 30rem;
+  margin: 2rem auto;
+}
+
+article p {
+  margin-top: 1rem;
+  opacity: 0.7;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  background-color: var(--bg-theme-color);
+  box-shadow: 0 0 2rem rgb(0 0 0 / 0.2);
+  border-radius: 8px;
+  position: fixed;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+input[type="radio"] {
+  appearance: none;
+  border: 2px solid var(--input-color);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+  background-color: var(--input-color);
+}
+
+#dark {
+  --input-color: #000;
+}
+
+#light {
+  --input-color: #999;
+}
+
+#orange {
+  --input-color: #c93407;
+}
+
+#purple {
+  --input-color: #720475;
+}
